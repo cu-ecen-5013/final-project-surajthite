@@ -10,7 +10,7 @@ Overiew of the repository
 
 [Project Overview Wiki Page](https://github.com/cu-ecen-5013/final-project-surajthite/wiki/Project-Overview)
 
-[Project Schedule Page](https://github.com/cu-ecen-5013/final-project-surajthite/wiki/Final-Project-Schedule-Page)
+[Project Schedule Page](https://github.com/cu-ecen-5013/final-project-surajthite/wiki/Project-Schedule-Page)
 
 [Suraj's Repository](https://github.com/cu-ecen-5013/final-project-surajthite)
 
