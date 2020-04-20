@@ -4,20 +4,26 @@ case "$1" in
     start)
         # echo "Starting scull_load"
         # sh /bin/scull_load
-        echo "Starting module_load"
+        #echo "Starting module_load"
        # sh /bin/module_load
-        sh /bin/aesdchar_load
+        #sh /bin/aesdchar_load
         # echo "Starting modprobe"
         # modprobe hello.ko
+        echo "Starting init script for I2C module"
+		modprobe i2c-dev
+		modprobe i2c-bcm2835 
         ;;
     stop)
         # echo "Removing scull_unload"
         # sh /bin/scull_unload
-        echo "Removing module_unload"
+        # echo "Removing module_unload"
         #sh /bin/module_unload
-        sh /bin/aesdchar_unload 
-        echo "Removing modprobe"
-        # rmmod hello.ko
+        # sh /bin/aesdchar_unload 
+        # echo "Removing modprobe"
+        
+        echo "Removing I2C modules"
+		rmmod i2c-bcm2835
+		rmmod i2c-dev# rmmod hello.ko
         ;;
     *)
 		 echo "Usage: $0 {start|stop}"
