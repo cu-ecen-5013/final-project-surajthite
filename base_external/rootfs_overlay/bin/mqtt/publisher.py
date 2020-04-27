@@ -31,7 +31,10 @@ def internet_on():
 	rep = os.system('ping ' + server_ip)
 	if rep == 0:
  	 print("**************Ping Successful to server***********************")
- 	 client.connect("10.0.0.20",1883,60) 
+ 	 try:
+	  client.connect("10.0.0.20",1883,60)
+	 except socket.error, exc:
+	   print "Caught exception socket.error : %s" % exc 
 	 client.publish("topic/test",data_to_send)
 	else:
 	 print("**************Writing to BackUp file******************")
@@ -46,3 +49,4 @@ internet_on()
 #client.publish("topic/test",str(sys.argv[1]))
 print('Current Data Point | ' + sys.argv[1])
 client.disconnect();
+
